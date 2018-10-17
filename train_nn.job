@@ -1,0 +1,13 @@
+#!/bin/sh
+#SBATCH -p gpu
+#SBATCH --gres=gpu:1
+#SBATCH --mem=8GB
+#SBATCH -o slurm_out/train-nn-saced-%A_%a.out
+#SBATCH -e slurm_out/train-nn-saced-%A_%a.err
+#SBATCH --time 0:10:00
+
+source ${HOME}/.bashrc
+
+
+python -u train_nn.py with 'num_epochs=10'
+

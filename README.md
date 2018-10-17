@@ -15,11 +15,11 @@ are commented with '#sacred'.
 ### To just run from the command line
 
 ```npm
-python train_mlp.py with num_epochs=10
+python train_nn.py with num_epochs=10
 ```
 
 ### To run with a job file on a cluster that uses Slurm
 
 ```
-sbatch train_mlp.job
+sbatch train_nn.job
 ```

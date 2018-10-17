@@ -18,6 +18,8 @@ import torchvision.transforms as transforms
 from sacred import Experiment
 from sacred.observers import MongoObserver
 
+from model_nn import NeuralNet
+
 EXPERIMENT_NAME = 'my_experiment-on-slurm'
 YOUR_CPU = 'your-hostname'  # TODO: you need to change this to your own hostname!
 DATABASE_NAME = 'my_database'
@@ -25,8 +27,6 @@ DATABASE_NAME = 'my_database'
 ex = Experiment(EXPERIMENT_NAME)
 
 ex.observers.append(MongoObserver.create(url=YOUR_CPU, db_name=DATABASE_NAME))
-
-from model_mlp import NeuralNet
 
 # Device configuration
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -154,7 +154,7 @@ def get_config():
     input_size = 784
     hidden_size = 500
     num_classes = 10
-    num_epochs = 2  # SACRED: Have a look at train_mlp.job for an example of how we can change parameter settings
+    num_epochs = 2  # SACRED: Have a look at train_nn.job for an example of how we can change parameter settings
     batch_size = 100
     learning_rate = 0.001
 
@@ -167,8 +167,8 @@ def main(_run):
     Sacred needs this main function, to start the experiment.
     If you want to import this experiment in another file (and use its configurations there, you can do that as follows:
 
-    import train_mlp
-    ex = train_mlp.ex
+    import train_nn
+    ex = train_nn.ex
 
     Then you can use the 'ex' the same way we also do in this code.
     """
