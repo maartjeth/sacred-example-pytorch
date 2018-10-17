@@ -1,0 +1,13 @@
+#!/bin/sh
+#SBATCH -p gpu
+#SBATCH --gres=gpu:1
+#SBATCH --mem=50GB
+#SBATCH -o slurm_out/train-mlp-saced-%A_%a.out
+#SBATCH -e slurm_out/train-mlp-saced-%A_%a.err
+#SBATCH --time 0:10:00
+
+source ${HOME}/.bashrc
+
+
+python -u train_mlp.py with 'num_epochs=10'
+
