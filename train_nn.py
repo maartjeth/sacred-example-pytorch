@@ -21,7 +21,7 @@ from sacred.observers import MongoObserver
 from model_nn import NeuralNet
 
 EXPERIMENT_NAME = 'my_experiment-on-slurm'
-YOUR_CPU = 'your-hostname'  # TODO: you need to change this to your own hostname - Use 'None' for default
+YOUR_CPU = None  # None is the default setting and will result in using localhost, change if you want something else
 DATABASE_NAME = 'my_database'
 
 ex = Experiment(EXPERIMENT_NAME)
