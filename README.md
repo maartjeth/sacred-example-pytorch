@@ -24,7 +24,7 @@ python train_nn.py with num_epochs=10
 sbatch train_nn.job
 ```
 
-#### Changing parameters
+### Changing parameters
 Sacred allows you to change your configuration in several ways. You can have al look at the 
 [documentation](https://sacred.readthedocs.io/en/latest/configuration.html#updating-config-entries)
 for a full overview of how to do this. 
@@ -35,7 +35,7 @@ to update it to ```num_epochs=10```. From the command line you can do this by us
  parameter update between quotation marks in case of integers: ```with 'num_epochs=10'```, as 
  otherwise your parameter is not recognized as an integer.
  
- #### Importing experiments
+ ### Importing experiments
  In some cases you may want to use a Sacred experiment in a new file. You can do this by
  importing it. An example for how that would go with the current setup:
  
@@ -58,14 +58,14 @@ sacredboard -m my-database
 
 ### Some examples
 
-##### Overview of some runs
+#### Overview of some runs
 ![alt text](screenshots/sacredboard_run_overview.png)
 
-##### Overview of config
+#### Overview of config
 ![alt text](screenshots/sacredboard_config.png)
 
-##### Overview of config
+#### Overview of results
 ![alt text](screenshots/sacredboard_results.png)
 
-##### Overview of config
+#### Overview of loss
 ![alt text](screenshots/sacredboard_loss.png)
