@@ -34,14 +34,14 @@ sacredboard -m my-database
 
 ### Some examples
 
-Overview of some runs
+##### Overview of some runs
 ![alt text](screenshots/sacredboard_run_overview.png)
 
-Overview of config
+##### Overview of config
 ![alt text](screenshots/sacredboard_config.png)
 
-Overview of config
+##### Overview of config
 ![alt text](screenshots/sacredboard_results.png)
 
-Overview of config
+##### Overview of config
 ![alt text](screenshots/sacredboard_loss.png)
